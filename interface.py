@@ -30,8 +30,8 @@ def add_bg_from_local(image_path):
         background-repeat: no-repeat;
         background-attachment: fixed;
     }}
-    </style>
-    """
+    </style>"""
+    
     st.markdown(css, unsafe_allow_html=True)
 
 # Appelle la fonction avec le chemin vers ton image locale
