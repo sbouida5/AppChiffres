@@ -5,6 +5,8 @@ import pandas as pd
 
 import base64
 
+
+
 hide_streamlit_style = """
     <style>
     #MainMenu {visibility: hidden;}
@@ -35,10 +37,14 @@ def add_bg_from_local(image_path):
 # Appelle la fonction avec le chemin vers ton image locale
 add_bg_from_local("Diapositive1.PNG")
 
-st.title("Analyse des chiffres employés")
+st.markdown('<h1 style="color: #F0F0F0;">Analyse des chiffres employés</h1>', unsafe_allow_html=True)
+
 
 # Étape 1 : Upload des fichiers Excel
+
 fichier1 = st.file_uploader("📁 Fichier .xlsx des programmes par semaines", type=["xlsx"])
+
+
 fichier2 = st.file_uploader("📁 Fichier .xlsx des programmes par employés", type=["xlsx"])
 
 # Champs de saisie affichés dès le départ
