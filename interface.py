@@ -21,7 +21,7 @@ def add_bg_from_local(image_path):
     with open(image_path, "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read()).decode()
 
-    css = f'''
+    css = f"""
     <style>
     .stApp {{
         background-image: url("data:image/png;base64,{encoded_string}");
@@ -31,7 +31,7 @@ def add_bg_from_local(image_path):
         background-attachment: fixed;
     }}
     </style>
-    '''
+    """
     st.markdown(css, unsafe_allow_html=True)
 
 # Appelle la fonction avec le chemin vers ton image locale
@@ -39,12 +39,9 @@ add_bg_from_local("Diapositive1.PNG")
 
 st.markdown('<h1 style="color: #F0F0F0;">Analyse des chiffres employés</h1>', unsafe_allow_html=True)
 
-
 # Étape 1 : Upload des fichiers Excel
 
 fichier1 = st.file_uploader("📁 Fichier .xlsx des programmes par semaines", type=["xlsx"])
-
-
 fichier2 = st.file_uploader("📁 Fichier .xlsx des programmes par employés", type=["xlsx"])
 
 # Champs de saisie affichés dès le départ
